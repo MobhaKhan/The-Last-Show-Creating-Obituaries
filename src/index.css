@@ -1,0 +1,177 @@
+body,h1,h2,h3,h4,h5,h6,li,p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  max-height: 100vh;
+  color: #333;
+}
+button,
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+#container {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#container > header {
+  border-top: 4px solid #4d455d;
+}
+header h1 a:hover {
+  color: #4d455d;
+}
+header {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+header aside {
+  flex: 0 1 9%;
+  display: flex;
+  justify-content: flex-start;
+}
+#header-button {
+  padding: 20px 10px;
+  font-size: 1em;
+}
+button:hover,
+.button:hover, 
+#write-obituary-button:hover {
+  background-color: #4d455d;
+  color: white;
+  transition-duration: 0.4s;
+}
+#app-header {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  align-items: center;
+}
+#main-container {
+  height: auto;
+  overflow-y: auto;
+  padding: 50px;
+}
+#empty-container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #adadad;
+  margin-top: 50px;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#overlay-content {
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+#overlay-close {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  font-size: 1.5em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#overlay-close:hover {
+  color: #4d455d;
+}
+#write-obituary-button {
+  background-color: #00cab1;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  font-size: 1em;
+  cursor: pointer;
+}
+#select-image-label {
+  cursor: pointer;
+  text-decoration: none;
+}
+#select-image-label:hover {
+  text-decoration: underline;
+}
+#input-name {
+  padding: 20px;
+  width: 90%;
+  font-size: 1em;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 25px 0 25px 0;
+}
+#input-name:focus {
+  border-color: #00cab1;
+}
+#obituary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 20px 0;
+  width: 100%;
+  height: auto;
+  align-self: start;
+  border: 1px solid #333;
+  box-shadow: 0px 1px 0px 1px #4d455d;
+  border-radius: 5px;
+}
+.play-pause-button {
+  font-size: 1.5em;
+  border: 2px solid #333;
+}
+#obituary-text {
+  font-family: 'Satisfy';
+  font-weight: 500;
+  font-size: 1.2em;
+  padding: 0 20px 0 20px;
+  text-align: justify;
+}
+.obituary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  width: 100%;
+  align-content: start;
+}
+@media (max-width: 1000px) {
+  .obituary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .obituary-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
